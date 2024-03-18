@@ -20,9 +20,10 @@ ___
 | `docker container ls` | Show all running containers |
 | `docker container ls -a` | Show all containers regardless of state |
 | `docker container ls --filter "status=exited" --filter "ancestor=mysql"` | Show all container instances of the mysql image that have exited |
-| `docker container logs <container-name>'` | Display all logs in specified container |
-| `docker container top <container-name>'` | Shows all running processes in an existing container |
-| `docker container inspect <container-name>'` | Display detailed information about specified container |
+| `docker container port <container-name>` | Show port mapping for the container |
+| `docker container logs <container-name>` | Display all logs in specified container |
+| `docker container top <container-name>` | Shows all running processes in an existing container |
+| `docker container inspect <container-name>` | Display detailed information about specified container |
 | `docker container inspect --format '{{.NetworkSettings.IPAddress}}' <container-name>'` | Display detailed information about specified container using specified format |
 | `docker container stats'` | Shows container resource usage statistics |
 
@@ -42,6 +43,7 @@ ___
 | `docker container stop <container-name>` | Stop a container |
 | `docker container restart <container-name>` | Restarts a container |
 | `docker container exec -it <container-name> bash/sh` | Open terminal inside specified container for additional command |
+| `docker container rename <container-name> <new-name>` | Rename a container |
 
 #### Remove Container
 | Command | Description |
@@ -49,4 +51,5 @@ ___
 | `docker container rm <container-name>` | Remove specified container |
 | `docker container rm -f <container-name>` | Force remove specified container even if it is running |
 | `docker container rm $(docker container ls --filter "status=exited" --filter "ancestor=mysql" -q)` | remove all containers whose id's are returned from '$(...)' list |
+| `docker container prune` | Remove all stopped containers |
 ---
