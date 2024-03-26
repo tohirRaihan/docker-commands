@@ -1,5 +1,5 @@
 # Docker Commands
-_A list of most important and commonly used Docker Commands for easy reference_✨✨✨
+_A list of most important and commonly used Docker Commands for easy reference_:sparkles::sparkles::sparkles:
 ___
 
 ### 💫Docker General Commands for Installation and Config Information:
@@ -64,4 +64,23 @@ ___
 | `docker network connect <network-name> <container-name>` | Connects a container to a network |
 | `docker network disconnect <network-name> <container-name>` | Disconnects a container from a network |
 | `docker network inspect <network-name>` | Displays detailed information about a network |
+---
+
+### 💫Docker Commands for Managing Images:
+| Command | Description |
+| ------- | ----------- |
+| `docker image ls` | Shows all local images |
+| `docker image ls --filter 'reference=ubuntu:16.04'` | Show images filtered by name and tag |
+| `docker image pull <image-name>` | Pull specified image from registry |
+| `docker image push <image-name[:TAG]>` | Upload an image to a registry |
+| `docker search <image-name> --filter "is-official=true"` | Find only official images having _[image-name]_ |
+| `docker image history <image-name>` | Show the history of an image |
+| `docker image inspect <image-name>` | Display detailed information on one or more images |
+| `docker image tag <source-image[:TAG]> <target-image[:TAG]>` | Create a tag _[target-image]_ that refers to _[source-image]_ |
+| `docker image build <PATH \| URL>` | Build an image from a Dockerfile |
+| `docker image build -t <new-image-name[:TAG]> <PATH \| URL>` | Builds and tags an image for easier tracking from a Dockerfile |
+| `docker image rm <image-name>` | Remove image for specified _image-name_ |
+| `docker image rm <image-id>` | Remove image for specified _image-id_ |
+| `docker image prune` | Remove unused images |
+| `docker image prune -a` | Clears all images that are not being used by containers |
 ---
