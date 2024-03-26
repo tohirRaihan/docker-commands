@@ -2,13 +2,15 @@
 _A list of most important and commonly used Docker Commands for easy reference_:sparkles::sparkles::sparkles:
 ___
 
-### 💫Docker General Commands for Installation and Config Information:
+### 💫Docker Commands for General Information and Cleanup:
 | Command | Description |
 | ------- | ----------- |
 | `docker version` | Provides full description of docker version |
 | `docker -v` | Provides short description of docker version |
 | `docker info` | Display system wide information |
-| `docker info --format '{{.DriverStatus}}'` | display 'DriverStatus' fragment from docker information |
+| `docker info --format '{{.DriverStatus}}'` | Display 'DriverStatus' fragment from docker information |
+| `docker system df` | Show docker disk usage |
+| `docker system prune` | Remove unused data |
 | `docker <command> (options)` | Docker command line structure (OLD but still works) |
 | `docker <command> <sub-command> (options)` | Docker command line structure (NEW) |
 ---
