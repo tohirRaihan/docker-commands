@@ -9,8 +9,8 @@ ___
 | `docker -v` | Provides short description of docker version |
 | `docker info` | Display system wide information |
 | `docker info --format '{{.DriverStatus}}'` | display 'DriverStatus' fragment from docker information |
-| `docker <command> (options)'` | Docker command line structure (OLD but still works) |
-| `docker <command> <sub-command> (options)'` | Docker command line structure (NEW) |
+| `docker <command> (options)` | Docker command line structure (OLD but still works) |
+| `docker <command> <sub-command> (options)` | Docker command line structure (NEW) |
 ---
 
 ### Docker Commands for Managing Containers:
@@ -24,7 +24,7 @@ ___
 | `docker container logs <container-name>` | Display all logs in specified container |
 | `docker container top <container-name>` | Shows all running processes in an existing container |
 | `docker container inspect <container-name>` | Display detailed information about specified container |
-| `docker container inspect --format '{{.NetworkSettings.IPAddress}}' <container-name>'` | Display detailed information about specified container using specified format |
+| `docker container inspect --format '{{.NetworkSettings.IPAddress}}' <container-name>` | Display detailed information about specified container using specified format |
 | `docker container stats'` | Shows container resource usage statistics |
 
 #### Run Container
