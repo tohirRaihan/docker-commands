@@ -1,8 +1,8 @@
 # Docker Commands
-_A list of most important and commonly used Docker Commands for easy reference_:sparkles::sparkles:
+_A list of most important and commonly used Docker Commands for easy reference_✨✨✨
 ___
 
-### Docker General Commands for Installation and Config Information:
+### 💫Docker General Commands for Installation and Config Information:
 | Command | Description |
 | ------- | ----------- |
 | `docker version` | Provides full description of docker version |
@@ -13,7 +13,7 @@ ___
 | `docker <command> <sub-command> (options)` | Docker command line structure (NEW) |
 ---
 
-### Docker Commands for Managing Containers:
+### 💫Docker Commands for Managing Containers:
 #### Display Container Information
 | Command | Description |
 | ------- | ----------- |
@@ -52,4 +52,16 @@ ___
 | `docker container rm -f <container-name>` | Force remove specified container even if it is running |
 | `docker container rm $(docker container ls --filter "status=exited" --filter "ancestor=mysql" -q)` | remove all containers whose id's are returned from '$(...)' list |
 | `docker container prune` | Remove all stopped containers |
+---
+
+### 💫Docker Commands for Managing Networks:
+| Command | Description |
+| ------- | ----------- |
+| `docker network create <network-name>` | Creates a new network (default type: bridge) |
+| `docker network rm <network-name>` | Remove one or more networks |
+| `docker network prune` | Remove all unused networks |
+| `docker network ls` | Lists all networks |
+| `docker network connect <network-name> <container-name>` | Connects a container to a network |
+| `docker network disconnect <network-name> <container-name>` | Disconnects a container from a network |
+| `docker network inspect <network-name>` | Displays detailed information about a network |
 ---
