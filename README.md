@@ -86,3 +86,20 @@ ___
 | `docker image prune` | Remove unused images |
 | `docker image prune -a` | Clears all images that are not being used by containers |
 ---
+
+### 💫Docker Commands for Data Volumes and Bind Mounts:
+| Command | Description |
+| ------- | ----------- |
+| `docker volume ls` | List all your volumes |
+| `docker volume inspect <volume-name>` | To access more detailed information about a specific volume
+ |
+| `docker container run -v <volume-name>:/path/container mysql` | Create docker volume with name |
+| `docker container run -v <volume-name>:/path/container:ro mysql` | Create Volumes as Read-Only |
+| `docker container run -v $(pwd):/path/container mysql` | Bind Mounting |
+| `docker volume create <volume-name>` | Creates a volume |
+| `docker run --volumes-from <container-name> mysql` | Automatically include another container’s volumes
+ |
+| `docker volume rm <volume-name>` | Delete a volume |
+| `docker volume rm <volume-name> -f` | Volumes which are currently mounted to a container can't be deleted unless you add the -f (force) flag |
+| `docker volume prune` | Clean up all unused volumes |
+---
